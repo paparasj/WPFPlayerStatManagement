@@ -1,0 +1,34 @@
+﻿<Window x:Class="MTParasPatel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MTParasPatel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="500" Background="#FF56E4FF" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <Canvas>
+            <Menu Height="19" Width="500">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New"/>
+                    <MenuItem Header="_Save"/>
+                    <Separator></Separator>
+                    <MenuItem x:Name="menuQuit" Header="_Quit" Click="menuQuit_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="_View">
+                    <MenuItem x:Name="menuHockey" Header="Ice Hockey Players" Click="btnHockey_Click"/>
+                    <MenuItem x:Name="menuBasketball" Header="Basketball Players" Click="btnBasketBall_Click"/>
+                    <MenuItem x:Name="menuBaseball" Header="Baseball Players" Click="btnBaseBall_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="menuHelp" Header="_Help">
+                    <MenuItem x:Name="menuAboutMe" Header="_About Me" Click="menuAboutMe_Click"/>
+                </MenuItem>
+            </Menu>
+        </Canvas>
+        <Button x:Name="btnViewHockey" Content="View Ice Hockey Players" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Width="142" Height="55" Click="btnHockey_Click" Background="#FFF18302"/>
+        <Button x:Name="btnViewBasketBall" Content="View BasketBall Players" HorizontalAlignment="Center" Margin="0,101,0,0" VerticalAlignment="Top" Width="148" Height="55" Background="#FFF9F8F8" Click="btnBasketBall_Click"/>
+        <Button x:Name="btnViewBaseBall" Content="View Baseball Players" HorizontalAlignment="Right" Margin="0,101,20,0" VerticalAlignment="Top" Width="140" Height="55" Background="#FF06A613" Click="btnBaseBall_Click"/>
+        <Label Content="Please select any option to view players list." HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Width="260" Background="#FF5788E8"/>
+    </Grid>
+</Window>
